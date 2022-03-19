@@ -1,5 +1,5 @@
 # 이분 탐색(이진 탐색) ? bisect
-# 이분 탐색은 O(n log n)
+# 이분 탐색은 O(n log n) (sort - O(n), search - O(log n))
 from sys import stdin
 input = stdin.readline
 '''
