@@ -42,8 +42,3 @@ while i < T:
     else:
         print(fibo(a-1),fibo(a))
     i += 1
-
-
-
-
-
