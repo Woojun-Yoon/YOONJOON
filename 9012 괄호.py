@@ -2,7 +2,7 @@
 from sys import stdin
 input = stdin.readline
 from collections import deque
-''' # ((()))(())((()))
+''' # ((()))(())((())) 잘못된 풀이!
 for _ in range(int(input())):
     bracket = deque(input().strip())
     
