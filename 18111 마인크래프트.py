@@ -35,7 +35,7 @@ for i in range(min_ , max_ + 1):
 
 print(result_time, max_len)
 '''
-
+# 케이스 배열 만들어서 시간 줄이기
 n, m ,b=map(int,input().split())
 list = [0]*257
 poli=[]
