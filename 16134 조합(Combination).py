@@ -44,3 +44,4 @@ for i in range(1, r):
     bottom = bottom * (i + 1) % limit
 
 print(top * pow(bottom, -1, limit) % limit) # pow 3번째 인자 = mod
+# 페르마의 소정리, 분할 정복 거듭제곱
