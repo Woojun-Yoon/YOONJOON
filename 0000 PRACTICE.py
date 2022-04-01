@@ -12,6 +12,14 @@ from math import comb
 from heapq import heapify
 
 input = stdin.readline
-
+'''
 n, *data = map(int, input().split()) # split()은 공백, 엔터, 탭으로 토큰화 default
 print(data)
+'''
+'''
+command = input().split()
+command = deque(command)
+print(command.index("123"))
+'''
+for i in range(10,-1,-1):
+    print(i)
