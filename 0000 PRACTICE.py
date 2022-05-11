@@ -1,4 +1,5 @@
 # if you know, you can do everything
+# git 강제 push command : git push -u origin +master
 from sys import stdin
 from collections import deque
 # deque은 무작위 접근시 시간복잡도가 O(n), i번째 데이터에 접근하려면 앞/뒤로 i번 순회 해야하기 때문
