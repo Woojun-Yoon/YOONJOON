@@ -9,7 +9,7 @@ from itertools import combinations
 from collections import Counter
 from bisect import bisect_left, bisect_right
 from collections import defaultdict
-from math import comb
+from math import comb, ceil, log2
 from heapq import heapify
 from copy import deepcopy
 from decimal import *
@@ -27,8 +27,10 @@ print(command.index("123"))
 '''
 for i in range(10,-1,-1):
     print(i)
-
+'''
 getcontext().prec = 500
 getcontext().rounding = ROUND_HALF_UP # 사사오입
 print(Decimal(1 / 3))
 print(Decimal('1')/ Decimal('3'))
+'''
+print(int(ceil(log2(5))))
