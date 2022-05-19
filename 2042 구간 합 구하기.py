@@ -41,7 +41,7 @@ nums = []
 tree_size = int(ceil(log2(n)))
 tree = [0] * 2 ** (tree_size + 1)
 
-''' tree 크기 편하게 구하기
+''' tree 크기 편하게 구하기 속도 우선시
 tree = [0] * (n * 4)
 '''
 for _ in range(n):
