@@ -13,6 +13,7 @@ from math import comb, ceil, log2
 from heapq import heapify
 from copy import deepcopy
 from decimal import *
+from typing import List # 알아볼 필요가 있음
 # deepcopy는 아예 완벽하게 복사해 버려서, 서로 영향을 안받음(가르키는 메모리 주소가 다름)
 
 input = stdin.readline
@@ -25,8 +26,10 @@ command = input().split()
 command = deque(command)
 print(command.index("123"))
 '''
+'''
 for i in range(10,-1,-1):
     print(i)
+'''
 '''
 getcontext().prec = 500
 getcontext().rounding = ROUND_HALF_UP # 사사오입
@@ -34,3 +37,6 @@ print(Decimal(1 / 3))
 print(Decimal('1')/ Decimal('3'))
 '''
 print(int(ceil(log2(5))))
+for i in range(int(input())):
+    i = (i & -i)
+    print(i)
