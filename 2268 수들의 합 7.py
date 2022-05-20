@@ -26,8 +26,6 @@ for _ in range(m):
     if a == 1:
         tree_update(b, c - nums[b])
         nums[b] = c
-        print(tree)
-        print(nums)
     else: # a == 2
         if c < b:
             print(tree_sum(b) - tree_sum(c - 1))
