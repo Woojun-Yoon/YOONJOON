@@ -38,4 +38,3 @@ if __name__ == '__main__':
                 fen_update(j + 2, k)
         else: # command == 2
             print(fen_xor(query[0] + 1))
-
