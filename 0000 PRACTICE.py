@@ -15,6 +15,7 @@ from copy import deepcopy
 from decimal import *
 from typing import List # 알아볼 필요가 있음
 # deepcopy는 아예 완벽하게 복사해 버려서, 서로 영향을 안받음(가르키는 메모리 주소가 다름)
+from cmath import *
 
 input = stdin.readline
 '''
@@ -36,7 +37,28 @@ getcontext().rounding = ROUND_HALF_UP # 사사오입
 print(Decimal(1 / 3))
 print(Decimal('1')/ Decimal('3'))
 '''
+'''
 print(int(ceil(log2(5))))
 for i in range(int(input())):
     i = (i & -i)
     print(i)
+'''
+# 고속푸리에변환 구현
+
+def fft(p):
+    n = len(p)
+    if n == 1:
+        return p
+    p_even = fft(p[0::2])
+    p_odd = fft(p[1::2])
+    w = [exp(2j * pi * x / n) for x in range(n // 2)]
+    return [p_even[x] + w[x] * p_odd[x] for x in range(n // 2)] + [p_even[x] - w[x] * p_odd[x] for x in range(n // 2)]
+
+def ifft(p):
+    n = len(p)
+    if n == 1:
+        return p
+    p_even = fft(p[0::2])
+    p_odd = fft(p[1::2])
+    w = [exp(-2j * pi * x / n) for x in range(n // 2)]
+    return [p_even[x] + w[x] * p_odd[x] for x in range(n // 2)] + [p_even[x] - w[x] * p_odd[x] for x in range(n // 2)]
