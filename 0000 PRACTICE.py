@@ -62,3 +62,6 @@ def ifft(p):
     p_odd = fft(p[1::2])
     w = [exp(-2j * pi * x / n) for x in range(n // 2)]
     return [p_even[x] + w[x] * p_odd[x] for x in range(n // 2)] + [p_even[x] - w[x] * p_odd[x] for x in range(n // 2)]
+
+for _ in range(5, -1, -1):
+    print(_)
