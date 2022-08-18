@@ -65,3 +65,11 @@ def ifft(p):
 
 for _ in range(5, -1, -1):
     print(_)
+
+x = 5
+if x > 0:
+    print(1)
+elif x > 1:
+    print(2)
+else:
+    print(3)
